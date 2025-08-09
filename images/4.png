@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Botella de refresco -->
+  <path d="M140,50 L160,50 L165,70 C165,70 175,80 175,90 C175,100 165,110 165,110 L165,230 C165,240 160,245 150,245 C140,245 135,240 135,230 L135,110 C135,110 125,100 125,90 C125,80 135,70 135,70 L140,50" fill="#E53935" />
+  
+  <!-- Tapa de la botella -->
+  <rect x="140" y="40" width="20" height="10" rx="3" ry="3" fill="#B71C1C" />
+  
+  <!-- Etiqueta -->
+  <rect x="130" y="110" width="40" height="80" rx="5" ry="5" fill="#FFFFFF" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="135" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#E53935">SODA</text>
+  <text x="150" y="155" font-family="Arial" font-size="8" text-anchor="middle" fill="#E53935">Refrescante</text>
+  <text x="150" y="170" font-family="Arial" font-size="8" text-anchor="middle" fill="#E53935">Sabor</text>
+  <text x="150" y="180" font-family="Arial" font-size="8" text-anchor="middle" fill="#E53935">Original</text>
+  
+  <!-- Burbujas -->
+  <circle cx="145" y="120" r="2" fill="#E53935" />
+  <circle cx="155" y="125" r="1.5" fill="#E53935" />
+  <circle cx="140" y="130" r="1" fill="#E53935" />
+  <circle cx="150" y="140" r="2" fill="#E53935" />
+  <circle cx="160" y="145" r="1.5" fill="#E53935" />
+  <circle cx="145" y="160" r="1" fill="#E53935" />
+  <circle cx="155" y="165" r="2" fill="#E53935" />
+  <circle cx="140" y="175" r="1.5" fill="#E53935" />
+  
+  <!-- Burbujas exteriores -->
+  <circle cx="120" y="130" r="3" fill="#FFCDD2" opacity="0.7" />
+  <circle cx="180" y="150" r="4" fill="#FFCDD2" opacity="0.7" />
+  <circle cx="125" y="170" r="5" fill="#FFCDD2" opacity="0.7" />
+  <circle cx="175" y="190" r="3" fill="#FFCDD2" opacity="0.7" />
+  <circle cx="130" y="210" r="4" fill="#FFCDD2" opacity="0.7" />
+  <circle cx="170" y="120" r="3" fill="#FFCDD2" opacity="0.7" />
+  
+  <!-- Líneas decorativas -->
+  <path d="M135,200 L165,200" stroke="#B71C1C" stroke-width="1" stroke-dasharray="2,2" />
+  <path d="M135,210 L165,210" stroke="#B71C1C" stroke-width="1" stroke-dasharray="2,2" />
+  <path d="M135,220 L165,220" stroke="#B71C1C" stroke-width="1" stroke-dasharray="2,2" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="250" rx="25" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>

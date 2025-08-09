@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <!-- Fondo degradado -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0056b3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Patrón de fondo con botellas y productos -->
+  <g opacity="0.1" fill="#ffffff">
+    <!-- Botellas -->
+    <path d="M200,100 L230,100 L240,130 C240,130 250,150 250,180 C250,210 240,230 240,230 L240,400 C240,420 230,430 215,430 C200,430 190,420 190,400 L190,230 C190,230 180,210 180,180 C180,150 190,130 190,130 L200,100" />
+    
+    <path d="M500,200 L530,200 L540,230 C540,230 550,250 550,280 C550,310 540,330 540,330 L540,500 C540,520 530,530 515,530 C500,530 490,520 490,500 L490,330 C490,330 480,310 480,280 C480,250 490,230 490,230 L500,200" />
+    
+    <path d="M800,150 L830,150 L840,180 C840,180 850,200 850,230 C850,260 840,280 840,280 L840,450 C840,470 830,480 815,480 C800,480 790,470 790,450 L790,280 C790,280 780,260 780,230 C780,200 790,180 790,180 L800,150" />
+    
+    <path d="M1100,250 L1130,250 L1140,280 C1140,280 1150,300 1150,330 C1150,360 1140,380 1140,380 L1140,550 C1140,570 1130,580 1115,580 C1100,580 1090,570 1090,550 L1090,380 C1090,380 1080,360 1080,330 C1080,300 1090,280 1090,280 L1100,250" />
+    
+    <!-- Latas -->
+    <rect x="300" y="200" width="80" height="160" rx="10" ry="10" />
+    <ellipse cx="340" cy="200" rx="40" ry="10" />
+    <ellipse cx="340" cy="360" rx="40" ry="10" />
+    
+    <rect x="600" y="100" width="80" height="160" rx="10" ry="10" />
+    <ellipse cx="640" cy="100" rx="40" ry="10" />
+    <ellipse cx="640" cy="260" rx="40" ry="10" />
+    
+    <rect x="900" y="300" width="80" height="160" rx="10" ry="10" />
+    <ellipse cx="940" cy="300" rx="40" ry="10" />
+    <ellipse cx="940" cy="460" rx="40" ry="10" />
+    
+    <!-- Vasos -->
+    <path d="M100,300 L160,300 L150,500 L110,500 Z" />
+    <ellipse cx="130" cy="300" rx="30" ry="10" />
+    
+    <path d="M400,400 L460,400 L450,550 L410,550 Z" />
+    <ellipse cx="430" cy="400" rx="30" ry="10" />
+    
+    <path d="M700,200 L760,200 L750,350 L710,350 Z" />
+    <ellipse cx="730" cy="200" rx="30" ry="10" />
+    
+    <path d="M1000,100 L1060,100 L1050,250 L1010,250 Z" />
+    <ellipse cx="1030" cy="100" rx="30" ry="10" />
+  </g>
+  
+  <!-- Líneas decorativas -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.2">
+    <line x1="0" y1="150" x2="1200" y2="150" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="450" x2="1200" y2="450" />
+  </g>
+  
+  <!-- Círculos decorativos -->
+  <g fill="#ffffff" opacity="0.1">
+    <circle cx="100" cy="100" r="50" />
+    <circle cx="1100" cy="500" r="70" />
+    <circle cx="300" cy="400" r="40" />
+    <circle cx="800" cy="200" r="60" />
+    <circle cx="600" cy="500" r="30" />
+    <circle cx="900" cy="100" r="20" />
+  </g>
+</svg>

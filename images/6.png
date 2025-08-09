@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Botella de agua premium importada -->
+  <path d="M140,50 L160,50 L165,70 C165,70 180,80 180,100 C180,120 170,130 170,130 L170,230 C170,240 165,245 150,245 C135,245 130,240 130,230 L130,130 C130,130 120,120 120,100 C120,80 135,70 135,70 L140,50" fill="#B3E5FC" />
+  
+  <!-- Tapa de la botella -->
+  <rect x="140" y="40" width="20" height="10" rx="3" ry="3" fill="#0288D1" />
+  
+  <!-- Etiqueta premium -->
+  <rect x="125" y="100" width="50" height="100" rx="5" ry="5" fill="#FFFFFF" />
+  <rect x="130" y="105" width="40" height="90" rx="3" ry="3" fill="#F5F5F5" stroke="#D4AF37" stroke-width="1" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="125" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#0288D1">AGUA</text>
+  <text x="150" y="140" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="#0288D1">MINERAL</text>
+  <text x="150" y="155" font-family="Arial" font-size="7" text-anchor="middle" fill="#0288D1">IMPORTADA</text>
+  
+  <!-- Sello premium -->
+  <circle cx="150" y="175" r="12" fill="#D4AF37" />
+  <circle cx="150" y="175" r="10" fill="#FFFFFF" />
+  <text x="150" y="178" font-family="Arial" font-size="5" font-weight="bold" text-anchor="middle" fill="#D4AF37">PREMIUM</text>
+  
+  <!-- Ondas de agua -->
+  <path d="M130,190 C135,188 140,192 145,190 C150,188 155,192 160,190 C165,188 170,192 175,190" stroke="#29B6F6" stroke-width="1" fill="none" />
+  <path d="M130,195 C135,193 140,197 145,195 C150,193 155,197 160,195 C165,193 170,197 175,195" stroke="#29B6F6" stroke-width="1" fill="none" />
+  <path d="M130,200 C135,198 140,202 145,200 C150,198 155,202 160,200 C165,198 170,202 175,200" stroke="#29B6F6" stroke-width="1" fill="none" />
+  
+  <!-- Burbujas -->
+  <circle cx="140" y="120" r="2" fill="#29B6F6" opacity="0.7" />
+  <circle cx="160" y="130" r="1.5" fill="#29B6F6" opacity="0.7" />
+  <circle cx="145" y="150" r="2.5" fill="#29B6F6" opacity="0.7" />
+  <circle cx="155" y="165" r="2" fill="#29B6F6" opacity="0.7" />
+  <circle cx="140" y="180" r="1.5" fill="#29B6F6" opacity="0.7" />
+  <circle cx="160" y="195" r="2" fill="#29B6F6" opacity="0.7" />
+  <circle cx="150" y="210" r="2.5" fill="#29B6F6" opacity="0.7" />
+  
+  <!-- Montañas (origen del agua) -->
+  <path d="M135,220 L145,210 L155,220 L165,210 L170,220" stroke="#0288D1" stroke-width="1" fill="none" />
+  
+  <!-- Corona VIP -->
+  <path d="M140,85 L150,75 L160,85 L155,90 L145,90 Z" fill="#D4AF37" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="250" rx="25" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>

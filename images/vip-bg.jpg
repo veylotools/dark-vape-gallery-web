@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <!-- Fondo degradado dorado -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AA8C2C;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="pattern-luxe" patternUnits="userSpaceOnUse" width="60" height="60" patternTransform="rotate(45)">
+      <rect width="60" height="60" fill="url(#bg-gradient)" />
+      <path d="M0,30 L60,30 M30,0 L30,60" stroke="#E5C649" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#pattern-luxe)" />
+  
+  <!-- Elementos decorativos de lujo -->
+  <g opacity="0.2" fill="#FFFFFF">
+    <!-- Coronas -->
+    <path d="M200,100 L250,50 L300,100 L275,125 L225,125 Z" />
+    <path d="M900,200 L950,150 L1000,200 L975,225 L925,225 Z" />
+    <path d="M400,400 L450,350 L500,400 L475,425 L425,425 Z" />
+    <path d="M700,300 L750,250 L800,300 L775,325 L725,325 Z" />
+    
+    <!-- Estrellas -->
+    <path d="M150,200 L160,220 L180,220 L165,235 L170,255 L150,245 L130,255 L135,235 L120,220 L140,220 Z" />
+    <path d="M850,100 L860,120 L880,120 L865,135 L870,155 L850,145 L830,155 L835,135 L820,120 L840,120 Z" />
+    <path d="M350,300 L360,320 L380,320 L365,335 L370,355 L350,345 L330,355 L335,335 L320,320 L340,320 Z" />
+    <path d="M650,450 L660,470 L680,470 L665,485 L670,505 L650,495 L630,505 L635,485 L620,470 L640,470 Z" />
+    <path d="M950,350 L960,370 L980,370 L965,385 L970,405 L950,395 L930,405 L935,385 L920,370 L940,370 Z" />
+    
+    <!-- Botellas premium -->
+    <path d="M100,150 L130,150 L135,170 C135,170 145,180 145,200 C145,220 135,230 135,230 L135,350 C135,360 130,365 115,365 C100,365 95,360 95,350 L95,230 C95,230 85,220 85,200 C85,180 95,170 95,170 L100,150" />
+    
+    <path d="M500,100 L530,100 L535,120 C535,120 545,130 545,150 C545,170 535,180 535,180 L535,300 C535,310 530,315 515,315 C500,315 495,310 495,300 L495,180 C495,180 485,170 485,150 C485,130 495,120 495,120 L500,100" />
+    
+    <path d="M800,200 L830,200 L835,220 C835,220 845,230 845,250 C845,270 835,280 835,280 L835,400 C835,410 830,415 815,415 C800,415 795,410 795,400 L795,280 C795,280 785,270 785,250 C785,230 795,220 795,220 L800,200" />
+    
+    <path d="M1100,150 L1130,150 L1135,170 C1135,170 1145,180 1145,200 C1145,220 1135,230 1135,230 L1135,350 C1135,360 1130,365 1115,365 C1100,365 1095,360 1095,350 L1095,230 C1095,230 1085,220 1085,200 C1085,180 1095,170 1095,170 L1100,150" />
+  </g>
+  
+  <!-- Líneas decorativas de lujo -->
+  <g stroke="#FFFFFF" stroke-width="2" opacity="0.1">
+    <line x1="0" y1="150" x2="1200" y2="150" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="450" x2="1200" y2="450" />
+  </g>
+  
+  <!-- Patrones geométricos de lujo -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.1">
+    <rect x="50" y="50" width="100" height="100" />
+    <rect x="1050" y="450" width="100" height="100" />
+    <rect x="250" y="350" width="100" height="100" />
+    <rect x="750" y="150" width="100" height="100" />
+    <rect x="550" y="250" width="100" height="100" />
+    
+    <circle cx="100" cy="100" r="70" />
+    <circle cx="1100" cy="500" r="70" />
+    <circle cx="300" cy="400" r="70" />
+    <circle cx="800" cy="200" r="70" />
+    <circle cx="600" cy="300" r="70" />
+  </g>
+  
+  <!-- Texto VIP grande y sutil -->
+  <text x="600" y="300" font-family="Arial" font-size="200" font-weight="bold" text-anchor="middle" fill="#FFFFFF" opacity="0.05">VIP</text>
+</svg>

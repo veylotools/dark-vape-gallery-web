@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Lata de bebida energética premium -->
+  <rect x="110" y="70" width="80" height="160" rx="10" ry="10" fill="#212121" />
+  
+  <!-- Parte superior de la lata -->
+  <ellipse cx="150" cy="70" rx="40" ry="10" fill="#424242" />
+  
+  <!-- Anillo de apertura -->
+  <ellipse cx="150" cy="60" rx="30" ry="8" fill="#616161" />
+  <rect x="145" y="55" width="10" height="5" rx="2" ry="2" fill="#D4AF37" />
+  
+  <!-- Parte inferior de la lata -->
+  <ellipse cx="150" cy="230" rx="40" ry="10" fill="#424242" />
+  
+  <!-- Etiqueta principal -->
+  <rect x="115" y="85" width="70" height="130" rx="5" ry="5" fill="#000000" />
+  
+  <!-- Borde dorado premium -->
+  <rect x="120" y="90" width="60" height="120" rx="3" ry="3" fill="none" stroke="#D4AF37" stroke-width="2" />
+  
+  <!-- Diseño de la etiqueta -->
+  <path d="M130,100 L170,100 L175,110 L175,180 L170,190 L130,190 L125,180 L125,110 Z" fill="#212121" />
+  
+  <!-- Rayo energético dorado -->
+  <path d="M150,110 L140,140 L155,140 L145,170" stroke="#D4AF37" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="125" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#D4AF37">PREMIUM</text>
+  <text x="150" y="185" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#D4AF37">ENERGÍA</text>
+  
+  <!-- Estrellas doradas -->
+  <path d="M130,155 L132,160 L137,160 L133,163 L135,168 L130,165 L125,168 L127,163 L123,160 L128,160 Z" fill="#D4AF37" />
+  <path d="M170,155 L172,160 L177,160 L173,163 L175,168 L170,165 L165,168 L167,163 L163,160 L168,160 Z" fill="#D4AF37" />
+  
+  <!-- Elementos naturales (hojas) -->
+  <path d="M135,140 C130,135 125,140 130,145 C125,145 125,150 130,150 Z" fill="#4CAF50" opacity="0.8" />
+  <path d="M165,140 C170,135 175,140 170,145 C175,145 175,150 170,150 Z" fill="#4CAF50" opacity="0.8" />
+  
+  <!-- Corona VIP -->
+  <path d="M140,95 L150,85 L160,95 L155,100 L145,100 Z" fill="#D4AF37" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="240" rx="40" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>

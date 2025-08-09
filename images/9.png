@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Vaso de smoothie premium -->
+  <path d="M120,80 L180,80 L170,240 L130,240 Z" fill="#9C27B0" opacity="0.8" />
+  
+  <!-- Tapa del vaso -->
+  <ellipse cx="150" cy="80" rx="30" ry="10" fill="#7B1FA2" />
+  <rect x="145" y="70" width="10" height="10" rx="2" ry="2" fill="#7B1FA2" />
+  <ellipse cx="150" cy="70" rx="5" ry="2" fill="#7B1FA2" />
+  
+  <!-- Pajita/Sorbete -->
+  <path d="M170,75 C175,65 180,60 185,65 C190,70 185,75 180,80" stroke="#E1BEE7" stroke-width="3" fill="none" />
+  
+  <!-- Etiqueta premium -->
+  <rect x="130" y="120" width="40" height="80" rx="5" ry="5" fill="#F3E5F5" />
+  <rect x="135" y="125" width="30" height="70" rx="3" ry="3" fill="#FFFFFF" stroke="#D4AF37" stroke-width="1" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="145" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="#7B1FA2">SMOOTHIE</text>
+  <text x="150" y="155" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="#7B1FA2">PREMIUM</text>
+  <text x="150" y="165" font-family="Arial" font-size="5" text-anchor="middle" fill="#7B1FA2">FRUTAS EXÓTICAS</text>
+  
+  <!-- Sello premium -->
+  <circle cx="150" y="180" r="10" fill="#D4AF37" />
+  <circle cx="150" y="180" r="8" fill="#FFFFFF" />
+  <text x="150" y="182" font-family="Arial" font-size="4" font-weight="bold" text-anchor="middle" fill="#D4AF37">PREMIUM</text>
+  
+  <!-- Frutas decorativas -->
+  <circle cx="140" y="100" r="7" fill="#E91E63" opacity="0.8" />
+  <circle cx="155" y="95" r="9" fill="#9C27B0" opacity="0.8" />
+  <circle cx="165" y="105" r="6" fill="#673AB7" opacity="0.8" />
+  
+  <!-- Frutas exóticas -->
+  <path d="M135,200 C130,195 125,200 130,205 C125,205 125,210 130,210 Z" fill="#4CAF50" opacity="0.8" />
+  <path d="M165,200 C170,195 175,200 170,205 C175,205 175,210 170,210 Z" fill="#4CAF50" opacity="0.8" />
+  
+  <!-- Semillas de superalimentos -->
+  <circle cx="145" y="210" r="1" fill="#795548" />
+  <circle cx="150" y="212" r="1" fill="#795548" />
+  <circle cx="155" y="210" r="1" fill="#795548" />
+  <circle cx="143" y="215" r="1" fill="#795548" />
+  <circle cx="148" y="217" r="1" fill="#795548" />
+  <circle cx="153" y="215" r="1" fill="#795548" />
+  <circle cx="158" y="217" r="1" fill="#795548" />
+  
+  <!-- Corona VIP -->
+  <path d="M140,110 L150,100 L160,110 L155,115 L145,115 Z" fill="#D4AF37" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="245" rx="25" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>

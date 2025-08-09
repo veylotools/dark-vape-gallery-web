@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Botella de jugo premium -->
+  <path d="M130,60 L170,60 L175,80 C175,80 185,90 185,110 C185,130 175,140 175,140 L175,230 C175,240 170,245 150,245 C130,245 125,240 125,230 L125,140 C125,140 115,130 115,110 C115,90 125,80 125,80 L130,60" fill="#8BC34A" />
+  
+  <!-- Tapa de la botella -->
+  <rect x="135" y="45" width="30" height="15" rx="5" ry="5" fill="#33691E" />
+  
+  <!-- Etiqueta premium -->
+  <rect x="120" y="100" width="60" height="100" rx="5" ry="5" fill="#F5F5F5" />
+  <rect x="125" y="105" width="50" height="90" rx="3" ry="3" fill="#FFFFFF" stroke="#D4AF37" stroke-width="2" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="125" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#33691E">JUGO</text>
+  <text x="150" y="140" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#33691E">PREMIUM</text>
+  <text x="150" y="155" font-family="Arial" font-size="8" text-anchor="middle" fill="#33691E">100% ORGÁNICO</text>
+  
+  <!-- Sello orgánico -->
+  <circle cx="150" y="175" r="15" fill="#D4AF37" />
+  <circle cx="150" y="175" r="13" fill="#FFFFFF" />
+  <text x="150" y="178" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="#D4AF37">ORGÁNICO</text>
+  <text x="150" y="185" font-family="Arial" font-size="5" text-anchor="middle" fill="#D4AF37">CERTIFICADO</text>
+  
+  <!-- Frutas decorativas -->
+  <circle cx="135" y="200" r="8" fill="#8BC34A" opacity="0.7" />
+  <circle cx="150" y="195" r="10" fill="#8BC34A" opacity="0.7" />
+  <circle cx="165" y="200" r="8" fill="#8BC34A" opacity="0.7" />
+  
+  <!-- Hojas orgánicas -->
+  <path d="M130,85 C125,80 120,85 125,90 C120,90 120,95 125,95 Z" fill="#33691E" />
+  <path d="M170,85 C175,80 180,85 175,90 C180,90 180,95 175,95 Z" fill="#33691E" />
+  
+  <!-- Corona VIP -->
+  <path d="M140,90 L150,80 L160,90 L155,95 L145,95 Z" fill="#D4AF37" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="250" rx="30" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>

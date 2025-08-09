@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Botella de bebida detox exclusiva -->
+  <path d="M130,60 L170,60 L175,80 C175,80 185,90 185,110 C185,130 175,140 175,140 L175,230 C175,240 170,245 150,245 C130,245 125,240 125,230 L125,140 C125,140 115,130 115,110 C115,90 125,80 125,80 L130,60" fill="#CDDC39" opacity="0.7" />
+  
+  <!-- Tapa de la botella -->
+  <rect x="135" y="45" width="30" height="15" rx="5" ry="5" fill="#AFB42B" />
+  
+  <!-- Etiqueta premium -->
+  <rect x="120" y="100" width="60" height="100" rx="5" ry="5" fill="#F9FBE7" />
+  <rect x="125" y="105" width="50" height="90" rx="3" ry="3" fill="#FFFFFF" stroke="#D4AF37" stroke-width="2" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="125" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#AFB42B">DETOX</text>
+  <text x="150" y="140" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="#AFB42B">EXCLUSIVA</text>
+  <text x="150" y="155" font-family="Arial" font-size="6" text-anchor="middle" fill="#AFB42B">REVITALIZANTE</text>
+  
+  <!-- Sello exclusivo -->
+  <circle cx="150" y="175" r="15" fill="#D4AF37" />
+  <circle cx="150" y="175" r="13" fill="#FFFFFF" />
+  <text x="150" y="178" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="#D4AF37">EXCLUSIVO</text>
+  
+  <!-- Ingredientes detox -->
+  <path d="M135,190 C130,185 125,190 130,195 C125,195 125,200 130,200 Z" fill="#8BC34A" />
+  <path d="M165,190 C170,185 175,190 170,195 C175,195 175,200 170,200 Z" fill="#8BC34A" />
+  
+  <!-- Rodajas de frutas -->
+  <circle cx="140" y="210" r="8" fill="#FFC107" />
+  <circle cx="140" y="210" r="6" fill="#FFECB3" />
+  <path d="M135,205 L145,215 M135,215 L145,205" stroke="#FFC107" stroke-width="1" />
+  
+  <circle cx="160" y="210" r="8" fill="#4CAF50" />
+  <circle cx="160" y="210" r="6" fill="#C8E6C9" />
+  <path d="M155,205 L165,215 M155,215 L165,205" stroke="#4CAF50" stroke-width="1" />
+  
+  <!-- Capas de ingredientes -->
+  <path d="M125,160 L175,160" stroke="#8BC34A" stroke-width="1" stroke-dasharray="2,2" />
+  <path d="M125,180" stroke="#CDDC39" stroke-width="1" stroke-dasharray="2,2" />
+  <path d="M125,200 L175,200" stroke="#AED581" stroke-width="1" stroke-dasharray="2,2" />
+  <path d="M125,220 L175,220" stroke="#9CCC65" stroke-width="1" stroke-dasharray="2,2" />
+  
+  <!-- Burbujas detox -->
+  <circle cx="135" y="120" r="2" fill="#8BC34A" opacity="0.7" />
+  <circle cx="165" y="130" r="3" fill="#8BC34A" opacity="0.7" />
+  <circle cx="145" y="150" r="2" fill="#8BC34A" opacity="0.7" />
+  <circle cx="155" y="170" r="3" fill="#8BC34A" opacity="0.7" />
+  <circle cx="140" y="190" r="2" fill="#8BC34A" opacity="0.7" />
+  
+  <!-- Corona VIP -->
+  <path d="M140,90 L150,80 L160,90 L155,95 L145,95 Z" fill="#D4AF37" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="250" rx="30" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Lata de bebida energética -->
+  <rect x="110" y="70" width="80" height="160" rx="10" ry="10" fill="#1A237E" />
+  
+  <!-- Parte superior de la lata -->
+  <ellipse cx="150" cy="70" rx="40" ry="10" fill="#303F9F" />
+  
+  <!-- Anillo de apertura -->
+  <ellipse cx="150" cy="60" rx="30" ry="8" fill="#3949AB" />
+  <rect x="145" y="55" width="10" height="5" rx="2" ry="2" fill="#C5CAE9" />
+  
+  <!-- Parte inferior de la lata -->
+  <ellipse cx="150" cy="230" rx="40" ry="10" fill="#303F9F" />
+  
+  <!-- Etiqueta principal -->
+  <rect x="115" y="85" width="70" height="130" rx="5" ry="5" fill="#C5CAE9" />
+  
+  <!-- Diseño de la etiqueta -->
+  <rect x="120" y="95" width="60" height="110" rx="3" ry="3" fill="#3949AB" />
+  
+  <!-- Rayo energético -->
+  <path d="M150,105 L140,135 L155,135 L145,165" stroke="#FFC107" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M160,115 L155,135 L165,135 L160,155" stroke="#FFC107" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M135,115 L130,135 L140,135 L135,155" stroke="#FFC107" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="185" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#FFFFFF">ENERGÍA</text>
+  <text x="150" y="200" font-family="Arial" font-size="10" text-anchor="middle" fill="#FFFFFF">MÁXIMA</text>
+  
+  <!-- Estrellas de energía -->
+  <circle cx="130" cy="170" r="3" fill="#FFC107" />
+  <circle cx="170" cy="170" r="3" fill="#FFC107" />
+  <circle cx="125" cy="155" r="2" fill="#FFC107" />
+  <circle cx="175" cy="155" r="2" fill="#FFC107" />
+  <circle cx="135" cy="140" r="2" fill="#FFC107" />
+  <circle cx="165" cy="140" r="2" fill="#FFC107" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="240" rx="40" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>

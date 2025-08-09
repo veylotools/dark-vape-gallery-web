@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Botella de agua -->
+  <path d="M130,50 L170,50 L175,80 C175,80 190,100 190,150 C190,220 175,240 175,240 L125,240 C125,240 110,220 110,150 C110,100 125,80 125,80 L130,50" fill="#E3F2FD" />
+  
+  <!-- Tapa de la botella -->
+  <rect x="135" y="35" width="30" height="15" rx="5" ry="5" fill="#0D47A1" />
+  
+  <!-- Etiqueta -->
+  <rect x="120" y="100" width="60" height="80" rx="5" ry="5" fill="#FFFFFF" stroke="#0D47A1" stroke-width="1" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="125" font-family="Arial" font-size="12" text-anchor="middle" fill="#0D47A1">Agua</text>
+  <text x="150" y="145" font-family="Arial" font-size="12" text-anchor="middle" fill="#0D47A1">Mineral</text>
+  <text x="150" y="165" font-family="Arial" font-size="8" text-anchor="middle" fill="#0D47A1">Pura y Refrescante</text>
+  
+  <!-- Ondas de agua -->
+  <path d="M125,190 C135,185 145,195 155,190 C165,185 175,195 185,190" stroke="#64B5F6" stroke-width="2" fill="none" />
+  <path d="M125,200 C135,195 145,205 155,200 C165,195 175,205 185,200" stroke="#64B5F6" stroke-width="2" fill="none" />
+  <path d="M125,210 C135,205 145,215 155,210 C165,205 175,215 185,210" stroke="#64B5F6" stroke-width="2" fill="none" />
+  
+  <!-- Burbujas -->
+  <circle cx="135" y="120" r="3" fill="#64B5F6" opacity="0.7" />
+  <circle cx="165" y="130" r="2" fill="#64B5F6" opacity="0.7" />
+  <circle cx="145" y="150" r="4" fill="#64B5F6" opacity="0.7" />
+  <circle cx="155" y="170" r="3" fill="#64B5F6" opacity="0.7" />
+  <circle cx="140" y="190" r="2" fill="#64B5F6" opacity="0.7" />
+  <circle cx="160" y="200" r="3" fill="#64B5F6" opacity="0.7" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="245" rx="40" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>

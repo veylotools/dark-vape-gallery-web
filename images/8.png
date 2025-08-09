@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <!-- Botella de té helado gourmet -->
+  <path d="M130,60 L170,60 L175,80 C175,80 185,90 185,110 C185,130 175,140 175,140 L175,230 C175,240 170,245 150,245 C130,245 125,240 125,230 L125,140 C125,140 115,130 115,110 C115,90 125,80 125,80 L130,60" fill="#795548" opacity="0.8" />
+  
+  <!-- Tapa de la botella -->
+  <rect x="135" y="45" width="30" height="15" rx="5" ry="5" fill="#5D4037" />
+  
+  <!-- Etiqueta premium -->
+  <rect x="120" y="100" width="60" height="100" rx="5" ry="5" fill="#EFEBE9" />
+  <rect x="125" y="105" width="50" height="90" rx="3" ry="3" fill="#D7CCC8" stroke="#D4AF37" stroke-width="2" />
+  
+  <!-- Texto de la etiqueta -->
+  <text x="150" y="125" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#5D4037">TÉ</text>
+  <text x="150" y="140" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#5D4037">HELADO</text>
+  <text x="150" y="155" font-family="Arial" font-size="8" text-anchor="middle" fill="#5D4037">GOURMET</text>
+  
+  <!-- Sello gourmet -->
+  <circle cx="150" y="175" r="15" fill="#D4AF37" />
+  <circle cx="150" y="175" r="13" fill="#EFEBE9" />
+  <text x="150" y="178" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="#D4AF37">GOURMET</text>
+  
+  <!-- Hojas de té -->
+  <path d="M135,190 C130,185 125,190 130,195 C125,195 125,200 130,200 Z" fill="#4CAF50" />
+  <path d="M165,190 C170,185 175,190 170,195 C175,195 175,200 170,200 Z" fill="#4CAF50" />
+  <path d="M145,200 C140,195 135,200 140,205 C135,205 135,210 140,210 Z" fill="#4CAF50" />
+  <path d="M155,200 C160,195 165,200 160,205 C165,205 165,210 160,210 Z" fill="#4CAF50" />
+  
+  <!-- Rodaja de limón -->
+  <circle cx="150" y="215" r="10" fill="#FFEB3B" />
+  <circle cx="150" y="215" r="8" fill="#FFF9C4" />
+  <path d="M145,210 L155,220 M145,220 L155,210" stroke="#FFEB3B" stroke-width="1" />
+  
+  <!-- Cubos de hielo -->
+  <rect x="135" y="165" width="8" height="8" rx="1" ry="1" fill="#B3E5FC" opacity="0.7" />
+  <rect x="157" y="170" width="10" height="10" rx="1" ry="1" fill="#B3E5FC" opacity="0.7" />
+  <rect x="140" y="180" width="7" height="7" rx="1" ry="1" fill="#B3E5FC" opacity="0.7" />
+  
+  <!-- Corona VIP -->
+  <path d="M140,90 L150,80 L160,90 L155,95 L145,95 Z" fill="#D4AF37" />
+  
+  <!-- Sombra -->
+  <ellipse cx="150" cy="250" rx="30" ry="5" fill="rgba(0,0,0,0.2)" />
+</svg>
