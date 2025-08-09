@@ -53,7 +53,7 @@ provedor/
 2. No se requieren dependencias adicionales, ya que el proyecto utiliza JavaScript puro.
 3. Abre el archivo `index.html` en tu navegador para acceder al sitio.
 
-## Acceso a la Sección VIP
+## Acceso a la Sección VIP 
 
 Para acceder a la sección VIP, debes registrarte y esperar la aprobación de un administrador:
 

@@ -65,9 +65,114 @@ document.addEventListener('DOMContentLoaded', function() {
     if (productButtons.length > 0) {
         productButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const productName = this.parentElement.querySelector('h4').textContent;
-                alert(`Has seleccionado: ${productName}. Pronto te mostraremos más detalles.`);
+                const productCard = this.parentElement;
+                const productId = productCard.getAttribute('data-product-id');
+                const productName = productCard.querySelector('h4').textContent;
+                const productDesc = productCard.querySelector('p').textContent;
+                const productImg = productCard.querySelector('img').getAttribute('src');
+                const productNumber = productImg.replace('images/', '').replace('.png', '');
+                
+                // Crear modal para mostrar detalles del producto
+                showProductDetails(productNumber, productName, productDesc);
             });
+        });
+    }
+    
+    // Función para mostrar detalles del producto
+    function showProductDetails(productNumber, productName, productDesc) {
+        // Precios ficticios para demostración
+        const prices = {
+            '1': '$25.000 / Caja x 12 unidades',
+            '2': '$18.000 / Paquete x 24 unidades',
+            '3': '$35.000 / Caja x 6 unidades',
+            '4': '$22.000 / Paquete x 12 unidades'
+        };
+        
+        // Crear el modal
+        const modal = document.createElement('div');
+        modal.className = 'product-modal';
+        
+        // Verificar si existen imágenes adicionales
+        let additionalImagesHTML = '';
+        const imagesToCheck = ['.1.png', '.2.png', '.3.png'];
+        
+        // Crear el contenido del modal
+        let modalContent = `
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="product-details">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img src="images/${productNumber}.png" alt="${productName}">
+                        </div>
+                        <div class="additional-images">
+        `;
+        
+        // Comprobar y agregar imágenes adicionales si existen
+        imagesToCheck.forEach(suffix => {
+            const imgPath = `images/${productNumber}${suffix}`;
+            const img = new Image();
+            img.src = imgPath;
+            img.onload = function() {
+                // La imagen existe, agregarla al modal
+                const thumbnailContainer = modal.querySelector('.additional-images');
+                if (thumbnailContainer) {
+                    const thumbnail = document.createElement('div');
+                    thumbnail.className = 'thumbnail';
+                    thumbnail.innerHTML = `<img src="${imgPath}" alt="${productName} vista adicional">`;
+                    thumbnail.addEventListener('click', function() {
+                        modal.querySelector('.main-image img').src = imgPath;
+                    });
+                    thumbnailContainer.appendChild(thumbnail);
+                }
+            };
+        });
+        
+        modalContent += `
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>${productName}</h3>
+                        <p class="product-price">${prices[productNumber] || 'Precio a consultar'}</p>
+                        <div class="product-description">
+                            <h4>Descripción:</h4>
+                            <p>${productDesc}</p>
+                        </div>
+                        <div class="product-actions">
+                            <a href="https://wa.me/573206609029?text=Hola, estoy interesado en ${productName}" target="_blank" class="cta-button whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Solicitar Cotización
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        modal.innerHTML = modalContent;
+        document.body.appendChild(modal);
+        
+        // Mostrar el modal con animación
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10);
+        
+        // Cerrar el modal
+        const closeBtn = modal.querySelector('.close-modal');
+        closeBtn.addEventListener('click', function() {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                document.body.removeChild(modal);
+            }, 300);
+        });
+        
+        // Cerrar el modal al hacer clic fuera del contenido
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(modal);
+                }, 300);
+            }
         });
     }
 

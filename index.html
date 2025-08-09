@@ -16,8 +16,7 @@
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="https://wa.me/573206609029" target="_blank">Contacto</a></li>
                 <li><a href="login.html" class="login-btn">Iniciar Sesión</a></li>
                 <li>
                     <div class="user-menu" style="display: none;">
@@ -50,28 +49,28 @@
             <div class="producto-categoria">
                 <h3>Productos Estándar</h3>
                 <div class="productos-grid">
-                    <div class="producto-card">
+                    <div class="producto-card" data-product-id="1">
                         <img src="images/1.png" alt="Jugo Hit">
                         <h4>Jugo Hit</h4>
-                        <p>Delicioso jugo de frutas en diferentes sabores</p>
+                        <p>Delicioso jugo de frutas en diferentes sabores. Disponible en presentaciones de mango, mora, tropical y naranja.</p>
                         <button class="producto-btn">Ver Detalles</button>
                     </div>
-                    <div class="producto-card">
+                    <div class="producto-card" data-product-id="2">
                         <img src="images/2.png" alt="Agua Mineral">
                         <h4>Agua Mineral</h4>
-                        <p>Agua mineral refrescante de alta calidad</p>
+                        <p>Agua mineral refrescante de alta calidad. Purificada y enriquecida con minerales esenciales para tu bienestar.</p>
                         <button class="producto-btn">Ver Detalles</button>
                     </div>
-                    <div class="producto-card">
+                    <div class="producto-card" data-product-id="3">
                         <img src="images/3.png" alt="Bebidas Energéticas">
                         <h4>Bebidas Energéticas</h4>
-                        <p>Energía para todo el día en diferentes presentaciones</p>
+                        <p>Energía para todo el día en diferentes presentaciones. Con taurina, cafeína y vitaminas del complejo B para máximo rendimiento.</p>
                         <button class="producto-btn">Ver Detalles</button>
                     </div>
-                    <div class="producto-card">
+                    <div class="producto-card" data-product-id="4">
                         <img src="images/4.png" alt="Refrescos">
                         <h4>Refrescos</h4>
-                        <p>Variedad de refrescos para todos los gustos</p>
+                        <p>Variedad de refrescos para todos los gustos. Sabores clásicos y nuevas opciones para satisfacer a tus clientes.</p>
                         <button class="producto-btn">Ver Detalles</button>
                     </div>
                 </div>
@@ -87,29 +86,7 @@
         </div>
     </section>
 
-    <section id="nosotros" class="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <div class="nosotros-content">
-            <div class="nosotros-text">
-                <p>Somos una empresa dedicada a la distribución de bebidas de alta calidad para negocios y establecimientos. Con años de experiencia en el mercado, nos hemos posicionado como un proveedor confiable y eficiente.</p>
-                <p>Nuestro compromiso es ofrecer productos frescos, entregas puntuales y un servicio al cliente excepcional.</p>
-            </div>
-            <div class="nosotros-stats">
-                <div class="stat">
-                    <span class="stat-number">5+</span>
-                    <span class="stat-text">Años de Experiencia</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">100+</span>
-                    <span class="stat-text">Clientes Satisfechos</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-text">Entregas Mensuales</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Sección Sobre Nosotros eliminada -->
 
     <section id="contacto" class="contacto">
         <h2>Contáctanos</h2>
@@ -121,7 +98,7 @@
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
-                    <p>+123 456 7890</p>
+                    <p>+57 320 660 9029</p>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
@@ -131,29 +108,15 @@
                     <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/573206609029" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="contacto-form">
-                <form>
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono">
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
-                </form>
+            <div class="contacto-info">
+                <h3>¿Tienes alguna pregunta o necesitas una cotización?</h3>
+                <p>Contáctanos directamente a través de WhatsApp para una respuesta rápida.</p>
+                <a href="https://wa.me/573206609029" target="_blank" class="cta-button whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                </a>
             </div>
         </div>
     </section>
