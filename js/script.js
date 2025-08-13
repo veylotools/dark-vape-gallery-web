@@ -82,10 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function showProductDetails(productNumber, productName, productDesc) {
         // Precios ficticios para demostración
         const prices = {
-            '1': '$25.000 / Caja x 12 unidades',
-            '2': '$18.000 / Paquete x 24 unidades',
-            '3': '$35.000 / Caja x 6 unidades',
-            '4': '$22.000 / Paquete x 12 unidades'
+            '1': '$1700 / Unidad x 6 unidades',
+            '2': '$2500 / Paquete x 12 unidades',
+            '3': '$2500 / Paquete  x 12 unidades',
+            '4': '$2000 / Paquete x 12 unidades'
         };
         
         // Crear el modal

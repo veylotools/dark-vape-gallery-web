@@ -1,21 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Base de datos simulada para usuarios (en una aplicación real, esto estaría en el servidor)
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-    
-    // Crear usuario administrador si no existe
-    if (!users.some(u => u.email === 'admin@provebebidas.com')) {
-        users.push({
-            id: 'admin-' + Date.now().toString(),
-            name: 'Administrador',
-            email: 'admin@provebebidas.com',
-            password: 'admin123', // En una aplicación real, usar contraseñas seguras y hash
-            registrationDate: new Date().toISOString(),
-            isAdmin: true,
-            vipApproved: true
+document.addEventListener('DOMContentLoaded', async function() {
+    // Importar el módulo de base de datos
+    // Cargar el script de base de datos
+    if (!window.Database) {
+        const script = document.createElement('script');
+        script.src = 'js/database.js';
+        document.head.appendChild(script);
+        
+        // Esperar a que el script se cargue
+        await new Promise(resolve => {
+            script.onload = resolve;
         });
-        localStorage.setItem('users', JSON.stringify(users));
-        console.log('Usuario administrador creado.');
     }
+    
+    // Cargar usuarios desde la base de datos
+    let users = await Database.loadUsers();
     
     // Verificar si hay un usuario en sesión
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -93,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Formulario de registro
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
-        registerForm.addEventListener('submit', function(e) {
+        registerForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const name = document.getElementById('register-name').value;
@@ -121,17 +119,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Crear nuevo usuario
             const newUser = {
-                id: Date.now().toString(),
+                id: 'user-' + Date.now().toString(),
                 name: name,
                 email: email,
                 password: password,
                 registrationDate: new Date().toISOString(),
+                isAdmin: false,
                 vipApproved: false // Por defecto, el usuario no tiene acceso VIP aprobado
             };
             
-            // Guardar en la base de datos local
-            users.push(newUser);
-            localStorage.setItem('users', JSON.stringify(users));
+            // Guardar en la base de datos
+            Database.saveUser(newUser);
+            
+            // Actualizar la lista de usuarios
+            users = await Database.loadUsers();
             
             // Iniciar sesión automáticamente
             localStorage.setItem('currentUser', JSON.stringify({

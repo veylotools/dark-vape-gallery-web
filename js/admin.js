@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     // Verificar si el usuario es administrador (en una aplicación real, esto se verificaría en el servidor)
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (!currentUser || currentUser.email !== 'admin@provebebidas.com') {
@@ -7,36 +7,64 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    // Obtener usuarios de localStorage
-    const users = JSON.parse(localStorage.getItem('users')) || [];
+    // Importar el módulo de base de datos
+    // Cargar el script de base de datos
+    if (!window.Database) {
+        const script = document.createElement('script');
+        script.src = 'js/database.js';
+        document.head.appendChild(script);
+        
+        // Esperar a que el script se cargue
+        await new Promise(resolve => {
+            script.onload = resolve;
+        });
+    }
     
-    // Cambio entre pestañas
-    const adminTabs = document.querySelectorAll('.admin-tab');
-    const adminContents = document.querySelectorAll('.admin-content');
+    // Variable para almacenar los usuarios
+    let users = [];
+    
+    // Cargar usuarios desde la base de datos
+    try {
+        users = await Database.loadUsers();
+        console.log('Usuarios cargados correctamente');
+        
+        // Una vez cargados los usuarios, inicializar la interfaz
+        initializeAdminInterface();
+    } catch (error) {
+        console.error('Error al cargar usuarios:', error);
+        alert('Error al cargar los usuarios. Por favor, intenta de nuevo más tarde.');
+    }
+    
+    // Función para inicializar la interfaz de administración
+    function initializeAdminInterface() {
+        // Cambio entre pestañas
+        const adminTabs = document.querySelectorAll('.admin-tab');
+        const adminContents = document.querySelectorAll('.admin-content');
 
-    adminTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const tabTarget = this.getAttribute('data-tab');
-            
-            // Actualizar tabs
-            adminTabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Actualizar contenidos
-            adminContents.forEach(content => {
-                content.classList.remove('active');
-                if (content.id === `${tabTarget}-content`) {
-                    content.classList.add('active');
-                }
+        adminTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabTarget = this.getAttribute('data-tab');
+                
+                // Actualizar tabs
+                adminTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Actualizar contenidos
+                adminContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === `${tabTarget}-content`) {
+                        content.classList.add('active');
+                    }
+                });
             });
         });
-    });
 
-    // Cargar solicitudes VIP pendientes
-    loadPendingRequests();
-    
-    // Cargar todos los usuarios
-    loadAllUsers();
+        // Cargar solicitudes VIP pendientes
+        loadPendingRequests();
+        
+        // Cargar todos los usuarios
+        loadAllUsers();
+    }
 
     // Función para cargar solicitudes VIP pendientes
     function loadPendingRequests() {
@@ -196,34 +224,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Función para aprobar una solicitud VIP
-    function approveVipRequest(userId) {
-        const userIndex = users.findIndex(u => u.id === userId);
+    async function approveVipRequest(userId) {
+        // Actualizar estado VIP usando el módulo de base de datos
+        const success = await Database.updateVipStatus(userId, true);
         
-        if (userIndex !== -1) {
-            users[userIndex].vipApproved = true;
-            localStorage.setItem('users', JSON.stringify(users));
+        if (success) {
+            // Actualizar la lista de usuarios
+            users = await Database.loadUsers();
             
             // Actualizar la interfaz
             loadPendingRequests();
             loadAllUsers();
             
             alert('Solicitud VIP aprobada correctamente.');
+        } else {
+            alert('Error al aprobar la solicitud VIP. Por favor, intenta de nuevo.');
         }
     }
 
     // Función para rechazar una solicitud VIP
-    function rejectVipRequest(userId) {
-        const userIndex = users.findIndex(u => u.id === userId);
+    async function rejectVipRequest(userId) {
+        // Actualizar estado VIP usando el módulo de base de datos
+        const success = await Database.updateVipStatus(userId, null); // Usar null para indicar rechazo
         
-        if (userIndex !== -1) {
-            users[userIndex].vipApproved = null; // Usar null para indicar rechazo
-            localStorage.setItem('users', JSON.stringify(users));
+        if (success) {
+            // Actualizar la lista de usuarios
+            users = await Database.loadUsers();
             
             // Actualizar la interfaz
             loadPendingRequests();
             loadAllUsers();
             
-            alert('Solicitud VIP rechazada.');
+            alert('Solicitud VIP rechazada correctamente.');
+        } else {
+            alert('Error al rechazar la solicitud VIP. Por favor, intenta de nuevo.');
         }
     }
 });
