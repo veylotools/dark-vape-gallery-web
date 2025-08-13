@@ -82,10 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function showProductDetails(productNumber, productName, productDesc) {
         // Precios ficticios para demostración
         const prices = {
-            '1': '$1700 / Unidad x 6 unidades',
-            '2': '$2500 / Paquete x 12 unidades',
-            '3': '$2500 / Paquete  x 12 unidades',
-            '4': '$2000 / Paquete x 12 unidades'
+            '1': '$1700 /solo Unidad x 6 unidades',
+            '2': '$2500 /solo Unidad x 12 unidades',
+            '3': '$2500 /solo Unidad  x 12 unidades',
+            '4': '$2000 /solo Unidad x 12 unidades'
         };
         
         // Crear el modal
@@ -106,6 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <img src="images/${productNumber}.png" alt="${productName}">
                         </div>
                         <div class="additional-images">
+                            <div class="thumbnail main-thumbnail active">
+                                <img src="images/${productNumber}.png" alt="${productName} imagen principal">
+                            </div>
         `;
         
         // Comprobar y agregar imágenes adicionales si existen
@@ -121,12 +124,36 @@ document.addEventListener('DOMContentLoaded', function() {
                     thumbnail.className = 'thumbnail';
                     thumbnail.innerHTML = `<img src="${imgPath}" alt="${productName} vista adicional">`;
                     thumbnail.addEventListener('click', function() {
+                        // Cambiar la imagen principal
                         modal.querySelector('.main-image img').src = imgPath;
+                        
+                        // Actualizar clase activa
+                        modal.querySelectorAll('.thumbnail').forEach(thumb => {
+                            thumb.classList.remove('active');
+                        });
+                        thumbnail.classList.add('active');
                     });
                     thumbnailContainer.appendChild(thumbnail);
                 }
             };
         });
+        
+        // Agregar evento a la miniatura principal
+        setTimeout(() => {
+            const mainThumbnail = modal.querySelector('.main-thumbnail');
+            if (mainThumbnail) {
+                mainThumbnail.addEventListener('click', function() {
+                    // Restaurar la imagen principal
+                    modal.querySelector('.main-image img').src = `images/${productNumber}.png`;
+                    
+                    // Actualizar clase activa
+                    modal.querySelectorAll('.thumbnail').forEach(thumb => {
+                        thumb.classList.remove('active');
+                    });
+                    mainThumbnail.classList.add('active');
+                });
+            }
+        }, 100);
         
         modalContent += `
                         </div>

@@ -13,6 +13,9 @@
     --border-radius: 5px;
     --vip-color: #ffc107;
     --vip-bg: rgba(255, 193, 7, 0.1);
+    --gradient-bg: linear-gradient(135deg, var(--primary-color), #003366);
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    --hover-transform: translateY(-5px);
 }
 
 /* Reset y estilos base */
@@ -84,9 +87,10 @@ h2::after {
     display: block;
     width: 80px;
     height: 4px;
-    background-color: var(--secondary-color);
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
     margin: 15px auto 0;
     border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Header y navegación */
@@ -165,6 +169,36 @@ nav ul li a.active::after {
     color: var(--light-text);
     text-align: center;
     padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 86, 179, 0.3), rgba(255, 152, 0, 0.3));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-content h2 {
@@ -216,15 +250,40 @@ nav ul li a.active::after {
 .producto-card {
     background-color: #fff;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    box-shadow: var(--card-shadow);
     overflow: hidden;
     transition: var(--transition);
     position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.producto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: var(--transition);
 }
 
 .producto-card:hover {
-    transform: translateY(-10px);
+    transform: var(--hover-transform);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.producto-card:hover::before {
+    opacity: 1;
+}
+
+.producto-card img {
+    transition: transform 0.5s ease;
+}
+
+.producto-card:hover img {
+    transform: scale(1.05);
 }
 
 .producto-card img {
@@ -357,9 +416,32 @@ nav ul li a.active::after {
     color: #666;
 }
 
-/* Sección Contacto */
+/* Sección de Contacto */
 .contacto {
-    background-color: #fff;
+    background: var(--gradient-bg);
+    color: var(--light-text);
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pattern.svg');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.contacto h2 {
+    color: var(--light-text);
+}
+
+.contacto h2::after {
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
 }
 
 .contacto-container {
@@ -369,37 +451,79 @@ nav ul li a.active::after {
     margin: 0 auto;
     gap: 40px;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
 .contacto-info {
     flex: 1;
     min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .contacto-info h3 {
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--light-text);
     font-size: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.contacto-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .contacto-info p {
     margin-bottom: 25px;
     font-size: 1.1rem;
+    color: var(--light-text);
+    opacity: 0.9;
 }
 
 .info-item {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .info-item i {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-right: 15px;
     width: 40px;
     height: 40px;
-    background-color: rgba(0, 86, 179, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -414,12 +538,13 @@ nav ul li a.active::after {
     display: flex;
     gap: 15px;
     margin-top: 30px;
+    justify-content: center;
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), #003366);
     color: var(--light-text);
     border-radius: 50%;
     display: flex;
@@ -427,28 +552,74 @@ nav ul li a.active::after {
     justify-content: center;
     font-size: 1.2rem;
     transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--secondary-color), #e65c00);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 0;
+}
+
+.social-icon i {
+    position: relative;
+    z-index: 1;
 }
 
 .social-icon:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon:hover::before {
+    opacity: 1;
 }
 
 .whatsapp-btn {
-    background-color: #25D366;
+    background: linear-gradient(135deg, #25d366, #128c7e);
     color: white;
     font-size: 1.1rem;
     padding: 12px 25px;
-    border-radius: var(--border-radius);
+    border-radius: 30px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #128c7e, #075e54);
+    transition: var(--transition);
+    opacity: 0;
+    z-index: -1;
+}
+
+.whatsapp-btn:hover::before {
+    opacity: 1;
 }
 
 .whatsapp-btn:hover {
-    background-color: #128C7E;
-    transform: translateY(-2px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
 }
 
 .contacto-form {
@@ -973,6 +1144,7 @@ footer {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .product-modal.show {
@@ -1057,10 +1229,36 @@ footer {
     overflow: hidden;
     cursor: pointer;
     transition: border-color 0.2s ease;
+    position: relative;
 }
 
 .thumbnail:hover {
     border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail.active {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+.thumbnail::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: transform 0.3s ease;
+    border-radius: 3px;
+}
+
+.thumbnail:hover::after,
+.thumbnail.active::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 .thumbnail img {
